@@ -12,6 +12,9 @@ var app = new Vue (
             imageIndex: 0,
             classActive: "active",
         },
+        mounted: function () {
+            setInterval(this.nextImage, 2000);
+        },
         methods: {
             nextImage: function () {
                 this.imageIndex++
@@ -24,7 +27,7 @@ var app = new Vue (
                 if (this.imageIndex == -1) {
                     this.imageIndex = this.images.length -1;
                 }
-            },
-        },
+            }
+        }
     }
 )
